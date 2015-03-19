@@ -24,13 +24,12 @@ app.get('/', function(req, res){
    res.write("<body>\n");
    res.write("<div class='container'>");
    res.write("<form method='POST' action='/post'>\n");
-   res.write("<input type='text' name='post'><br/>\n");
+   res.write("<input type='text' name='post'><br/><br/>\n");
    res.write("<input type='submit' value='post'>\n");
    res.write("</form><br/>");
    res.write("</div>");
-   res.write("<div style='margin-top:200px'>");
-   res.write('<a class="twitter-timeline" href="https://twitter.com/CPSC_473" data-widget-id="578676005914550272">Tweets by @CPSC_473</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>');
+   res.write("<div style='margin-top:100px'>");
+   res.write('<a class="twitter-timeline" href="https://twitter.com/CPSC_473" data-widget-id="578676005914550272">Tweets by @CPSC_473</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?"http":"https";if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>');
     res.write("</div>");
     res.write("</body>\n");
     res.write("</html>\n");
@@ -39,10 +38,10 @@ app.get('/', function(req, res){
 
 app.post('/post', function(req, res){
   res.send('Check CPSC 473 twitter');
-  console.log(req.body.post);
+  //console.log(req.body.post);
   client.post('statuses/update', {status: req.body.post},  function(error, tweet, response){
     if(error) throw error;
-    console.log(tweet);  // Tweet body.
+    console.log("Posted at  "+tweet.user.screen_name);  // Tweet body.
     //console.log(response);  // Raw response object.
   });
 });
