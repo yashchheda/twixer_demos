@@ -34,19 +34,14 @@
 
     <div class="container">
 
-      <form class="form-signin" id="twiiter_login" method="post" action="/login">
-        <h2 class="form-signin-heading">Please sign in.</span></h2>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input name="email" type="email"  id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input name="pwd" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        <!--div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div-->
-        <button class="btn btn-lg btn-primary btn-block" id="login" type="submit">Sign in</button>
-        <a class="btn btn-lg btn-primary btn-block" href="/register">Register</a>
+      <form class="form-signin" id="twiiter_register" method="post" action="/login">
+        <h2 class="form-signin-heading">Please Register.</span></h2>
+        <input name="name" type="text"  class="form-control" placeholder="Name" required autofocus>
+        <input name="email" type="password" id="inputPassword" class="form-control" placeholder="Email address" required>
+        <input name="pwd" type="email"   class="form-control" placeholder="Password" required autofocus>
+        <input name="pwd" type="text" id="inputPassword" class="form-control" placeholder="Bio" required>
+
+        <button class="btn btn-lg btn-primary btn-block" id="login" type="submit">Register</button>
       </form>
 
     </div> <!-- /container -->

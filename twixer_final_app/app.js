@@ -97,4 +97,8 @@ app.get('/logout',function(req,res){
 	});
 
 });
+app.get('/register',function(req,res){
+  res.render("register.html");
+
+});
 app.listen(3000);
