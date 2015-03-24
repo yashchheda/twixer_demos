@@ -54,41 +54,58 @@
 
 
   <!-- the main contain -->
-   <div class="col-md-10">
-    <div class="thumbnail">
-      <div class="caption">
-        <!-- Voted tweet -->
-          <h3>Tweets to vote</h3>
-        <div class="panel panel-default">
-          <div class="vote-queue">
-        </div>
-        </div>
-      </div>
-    </div>
-    <div class="thumbnail">
-      <div class="caption">
-        <!-- non-oted tweet -->
-          <h3>Voted tweets</h3>
-        <div class="panel panel-default">
-          <div class="voted">
-          </div>
-        </div>
+  <!-- the main contain -->
+  <div class="col-md-10">
+   <div class="thumbnail">
 
-        <div class="panel panel-default">
-          <div class="panel-heading">Group name1 @username</div>
-          <div class="panel-body">
-            tweets content
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
+       <!-- New tweet -->
+     <div class="caption">
+       <div class="panel panel-default">
+        <div class="panel-heading"><h3>Post New Tweet</h3></div>
+          <input id="tweet"></input>
+         <button class="btn btn-default btn-group-l" id="submit">Submit</button>
+       </div>
+     </div>
+     <!-- End of new tweet panel -->
+
+     <!-- Tweets to vote panel -->
+     <div class="caption">
+       <div class="panel panel-default">
+        <div class="panel-heading"><h3>Tweets To Post</h3></div>
+       <div class="vote-queue"></div>
+       </div>
+     </div>
+     <!-- End of tweets to vote panel -->
+
+      <!-- Tweets already voted panel -->
+     <div class="caption">
+       <div class="panel panel-default">
+        <div class="panel-heading"><h3>Tweets already voted</h3></div>
+       <div class="voted"></div>
+       </div>
+     </div>
+     <!-- End of Tweets already voted panel -->
+
+      <!-- Tweets vote tally panel -->
+     <div class="caption">
+       <div class="panel panel-default">
+        <div class="panel-heading"><h3>Tweets vote tally</h3></div>
+       <div class="tweets"></div>
+       </div>
+     </div>
+     <!-- End of Tweets vote tally panel -->
+
+   </div>
+ </div>
+
 </div>
 
   <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
   <!--script src="js/app_twixer.js"></script-->
   <!-- Bootstrap core js -->
   <script src="js/bootstrap.js"></script>
-  <!--script src="js/app.js"></script-->
+  <script src="js/app.js"></script>
+  <script src="js/login_functions.js"></script>
   <script src="js/client.js"></script>
 </html>

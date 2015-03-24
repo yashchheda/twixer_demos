@@ -101,4 +101,26 @@ app.get('/register',function(req,res){
   res.render("register.html");
 
 });
+app.post('/register',function(req,res){
+  obj.users.push(req.body);
+  res.render("register.html");
+  console.log(obj);
+});
+app.post('/userinfo',function(req,res){
+  sess=req.session;
+
+  for(var users in obj.users){
+
+    var json_email=obj.users[users].email;
+    var sess_email=sess.email;
+      if(json_email===sess_email)
+      {
+        result="success";
+        console.log(obj.users[users]);
+        res.json(obj.users[users]);
+        break;
+      }
+
+  }
+});
 app.listen(3000);
